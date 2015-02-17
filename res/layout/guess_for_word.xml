@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="10.0dip" android:paddingRight="10.0dip"
+              android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="13.0"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:background="@drawable/main_bg">
+    <RelativeLayout android:id="@+id/indicatorBar" android:layout_width="fill_parent" android:layout_height="0.0dip"
+                    android:layout_weight="1.0">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content"
+                      android:layout_height="fill_parent" android:layout_alignParentLeft="true">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                       android:src="@drawable/ic_money" android:scaleType="fitCenter"/>
+            <TextView android:textSize="@dimen/guess_indicator_text_size" android:textColor="@color/white"
+                      android:id="@+id/guess_money" android:paddingLeft="3.0dip" android:layout_width="wrap_content"
+                      android:layout_height="fill_parent"/>
+        </LinearLayout>
+        <TextView android:textSize="@dimen/guess_indicator_text_size" android:textColor="@color/white"
+                  android:id="@+id/guessPassedIndicator" android:layout_width="wrap_content"
+                  android:layout_height="fill_parent" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/guessCategoryContainer" android:paddingLeft="20.0dip"
+                    android:paddingRight="20.0dip"
+                    android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/guess_indicator_text_size" android:textColor="@color/white"
+                  android:gravity="center" android:id="@+id/guessCategoryText"
+                  android:background="@drawable/audio_category_bg" android:layout_width="fill_parent"
+                  android:layout_height="fill_parent" android:scaleType="fitCenter"
+                  android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip"
+                  android:weightSum="5.0" android:layout_weight="7.0">
+
+        <RelativeLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent"
+                        android:layout_weight="1.0">
+            <ImageView android:id="@+id/guess_hint" android:clickable="true" android:layout_width="fill_parent"
+                       android:layout_height="wrap_content" android:src="@drawable/button_hint"
+                       android:scaleType="centerInside" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0">
+            <ImageView android:id="@+id/audio_guess_circel" android:layout_width="fill_parent"
+                       android:layout_height="fill_parent" android:src="@drawable/guess_circle"
+                       android:scaleType="fitCenter" android:layout_alignParentBottom="true"/>
+            <ImageView android:id="@+id/audio_guess_arc" android:layout_width="fill_parent"
+                       android:layout_height="fill_parent" android:src="@drawable/guess_arc"
+                       android:scaleType="fitCenter" android:layout_alignParentBottom="true"/>
+            <LinearLayout android:gravity="center_vertical" android:id="@+id/answerBox" android:layout_width="wrap_content"
+                          android:layout_height="80.0dip" android:layout_centerInParent="true"/>
+          <!--  <ToggleButton android:id="@+id/guess_play_toggle"
+                          android:layout_width="80.0dip" android:layout_height="80.0dip"
+                          android:textOn="@string/empty_string" android:textOff="@string/empty_string"
+                          android:text="@string/empty_string" android:layout_centerInParent="true"/>-->
+            <!--android:background="@drawable/guess_play_states"-->
+            <TextView android:textSize="@dimen/guess_indicator_text_size" android:textColor="@color/white"
+                      android:id="@+id/guess_audio_duration" android:layout_width="wrap_content"
+                      android:layout_height="wrap_content" android:layout_marginBottom="20.0dip"
+                      android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent"
+                        android:layout_weight="1.0">
+            <ImageView android:id="@+id/guess_help" android:clickable="true" android:layout_width="fill_parent"
+                       android:layout_height="wrap_content" android:src="@drawable/button_help"
+                       android:scaleType="centerInside" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+          <RelativeLayout android:id="@+id/answerBoxContainer" android:layout_width="0.0dip"
+                    android:layout_height="fill_parent" android:layout_weight="2.0">
+        <!--<LinearLayout android:gravity="center_vertical" android:id="@+id/answerBox" android:layout_width="wrap_content"
+                      android:layout_height="fill_parent" android:layout_centerInParent="true"/>-->
+        <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"
+                   android:src="@drawable/guess_seperator" android:scaleType="fitCenter"
+                   android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    </LinearLayout>
+  <!--  <RelativeLayout android:id="@+id/answerBoxContainer" android:layout_width="fill_parent"
+                    android:layout_height="0.0dip" android:layout_weight="2.0">
+        <LinearLayout android:gravity="center_vertical" android:id="@+id/answerBox" android:layout_width="wrap_content"
+                      android:layout_height="fill_parent" android:layout_centerInParent="true"/>
+        <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"
+                   android:src="@drawable/guess_seperator" android:scaleType="fitCenter"
+                   android:layout_alignParentBottom="true"/>
+    </RelativeLayout>-->
+    <LinearLayout android:orientation="vertical" android:id="@+id/guessKeyboard" android:paddingTop="10.0dip"
+                  android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="4.0">
+        <LinearLayout android:orientation="horizontal" android:id="@+id/guessInputRow1"
+                      android:layout_width="fill_parent" android:layout_height="wrap_content">
+                   <Button
+                           android:id="@+id/q"
+                           android:layout_height="wrap_content"
+                           android:layout_width="wrap_content"
+                           android:text="q"
+                           android:layout_weight="1"
+                           android:background="@drawable/key_bg"></Button>
+            <Button
+                    android:id="@+id/q"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="q"
+                    android:layout_weight="1"
+                    android:background="@drawable/key_bg"></Button>
+            <Button
+                    android:id="@+id/q"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="q"
+                    android:layout_weight="1"
+                    android:background="@drawable/key_bg"></Button>
+            <Button
+                    android:id="@+id/q"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="q"
+                    android:layout_weight="1"
+                    android:background="@drawable/key_bg"></Button>
+            <Button
+                    android:id="@+id/q"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="q"
+                    android:layout_weight="1"
+                    android:background="@drawable/key_bg"></Button>
+            <Button
+                    android:id="@+id/q"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="q"
+                    android:layout_weight="1"
+                    android:background="@drawable/key_bg"></Button>
+            <Button
+                    android:id="@+id/q"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="q"
+                    android:layout_weight="1"
+                    android:background="@drawable/key_bg"></Button>
+            <Button
+                    android:id="@+id/q"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="q"
+                    android:layout_weight="1"
+                    android:background="@drawable/key_bg"></Button>
+            <Button
+                    android:id="@+id/q"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="q"
+                    android:layout_weight="1"
+                    android:background="@drawable/key_bg"></Button>
+            <Button
+                    android:id="@+id/q"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="q"
+                    android:layout_weight="1"
+                    android:background="@drawable/key_bg"></Button>
+            <Button
+                    android:id="@+id/q"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="q"
+                    android:layout_weight="1"
+                    android:background="@drawable/key_bg"></Button>
+
+
+
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/guessInputRow2"
+                      android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button
+                    android:id="@+id/q"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="q"
+                    android:layout_weight="1"
+                    android:background="@drawable/key_bg"></Button>
+            <Button
+                    android:id="@+id/q"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="q"
+                    android:layout_weight="1"
+                    android:background="@drawable/key_bg"></Button>
+            <Button
+                    android:id="@+id/q"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="q"
+                    android:layout_weight="1"
+                    android:background="@drawable/key_bg"></Button>
+            <Button
+                    android:id="@+id/q"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="q"
+                    android:layout_weight="1"
+                    android:background="@drawable/key_bg"></Button>
+            <Button
+                    android:id="@+id/q"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="q"
+                    android:layout_weight="1"
+                    android:background="@drawable/key_bg"></Button>
+            <Button
+                    android:id="@+id/q"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="q"
+                    android:layout_weight="1"
+                    android:background="@drawable/key_bg"></Button>
+            <Button
+                    android:id="@+id/q"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="q"
+                    android:layout_weight="1"
+                    android:background="@drawable/key_bg"></Button>
+            <Button
+                    android:id="@+id/q"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="q"
+                    android:layout_weight="1"
+                    android:background="@drawable/key_bg"></Button>
+            <Button
+                    android:id="@+id/q"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="q"
+                    android:layout_weight="1"
+                    android:background="@drawable/key_bg"></Button>
+                      </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/guessInputRow3"
+                      android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button
+                    android:id="@+id/q"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="q"
+                    android:layout_weight="1"
+                    android:background="@drawable/key_bg"></Button>
+            <Button
+                    android:id="@+id/q"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="q"
+                    android:layout_weight="1"
+                    android:background="@drawable/key_bg"></Button>
+            <Button
+                    android:id="@+id/q"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="q"
+                    android:layout_weight="1"
+                    android:background="@drawable/key_bg"></Button>
+            <Button
+                    android:id="@+id/q"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="q"
+                    android:layout_weight="1"
+                    android:background="@drawable/key_bg"></Button>
+            <Button
+                    android:id="@+id/q"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="q"
+                    android:layout_weight="1"
+                    android:background="@drawable/key_bg"></Button>
+            <Button
+                    android:id="@+id/q"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="q"
+                    android:layout_weight="1"
+                    android:background="@drawable/key_bg"></Button>
+                      </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
